@@ -10,10 +10,12 @@ const inter = Lato({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider>
-      <main className={`${inter.className} prose`}>
-        <Component {...pageProps} />
-      </main>
-    </ThemeProvider>
+    <div className='flex items-center justify-center min-h-screen'>
+      <ThemeProvider>
+        <main className={`${inter.className} prose w-full`}>
+          <Component {...pageProps} />
+        </main>
+      </ThemeProvider>
+    </div>
   )
 }
