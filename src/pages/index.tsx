@@ -8,6 +8,10 @@ export default function Home() {
       <Link href="/admin/register">
         <Button>Admin Register</Button>
       </Link>
+      <br />
+      <Link href="/admin/login">
+        <Button>Admin Login</Button>
+      </Link>
     </div>
   )
 }

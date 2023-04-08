@@ -42,7 +42,7 @@ export default function Register() {
 
         // Handle successful submission
         // e.g., show success message to user, navigate to next page, etc.
-        setSuccessMessage('Registration Successful')
+        setSuccessMessage('Registration Successful. Redirecting to Login Page...')
 
         // Navigate to /login page after a delay of 2 seconds
         setTimeout(() => {
