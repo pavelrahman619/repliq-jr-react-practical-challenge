@@ -1,3 +1,4 @@
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -36,4 +37,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Ecommerce Website Documentation
+Tasks:
+1. Login & Home/Landing View
+
+	a. Register View
+
+2. Product List View / Product Detail View
+
+3. Cart View / Checkout View
+
+	a. Delete Product from Cart
+
+4. Admin Dashboard / Overview / Summary
+
+5. Admin Customers List / Customer Detail View
+
+	a. Add Customer
+
+What's not working:
 
