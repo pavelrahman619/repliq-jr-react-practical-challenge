@@ -1,50 +1,20 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { Card, CardHeader, CardBody, Typography, Button } from "@material-tailwind/react";
 
-type Product = {
-    id: number;
-    title: string;
-    price: number;
-    image: string;
-    // Add other properties as needed
+const ProductDetailsPage = () => {
+    const router = useRouter();
+    const { productId, productTitle, productDescription } = router.query; // Access the query parameters
+
+    // Render the product details using the received data
+    return (
+        <div>
+            <h1>Product Details</h1>
+            <p>Product ID: {productId}</p>
+            <p>Product Title: {productTitle}</p>
+            <p>Product Description: {productDescription}</p>
+            {/* Render other product details using the received data */}
+        </div>
+    );
 };
 
-type ProductDetailsProps = {
-  product: Product;
-};
-
-const ProductDetails = ({ product }: ProductDetailsProps) => {
-  const { id, title, price, image } = product;
-  const router = useRouter();
-
-  const handleBack = () => {
-    router.back();
-  };
-
-  return (
-    <div>
-      <h1>Product Details</h1>
-      <Card key={id} className="w-96">
-        <CardHeader color="blue" className="relative h-56">
-          <img
-            src={`${image}`}
-            alt={`${title}`}
-            className="h-full w-full"
-          />
-        </CardHeader>
-        <CardBody className="text-center">
-          <Typography variant="h5" className="mb-2">
-            {title}
-          </Typography>
-          <Typography variant="h6">
-            Price: ${price}
-          </Typography>
-        </CardBody>
-        <Button onClick={handleBack}>Back</Button>
-      </Card>
-    </div>
-  );
-};
-
-export default ProductDetails;
+export default ProductDetailsPage;

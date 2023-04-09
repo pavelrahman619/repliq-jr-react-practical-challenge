@@ -1,10 +1,11 @@
 import { Button } from "@material-tailwind/react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function Dashboard() {
-    const router = useRouter();
     const [authenticated, setAuthenticated] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         // Check if user is authenticated
@@ -32,6 +33,12 @@ export default function Dashboard() {
             {authenticated ? (
                 <div>
                     <h1>Dashboard page</h1>
+                    <Link href="/admin/customers-list">
+                        <Button>Customer List</Button>
+                    </Link>
+                    <br />
+                    <br />
+
                     <Button onClick={handleLogout}>
                         Logout
                     </Button>
