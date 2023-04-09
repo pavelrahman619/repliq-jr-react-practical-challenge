@@ -11,6 +11,7 @@ type Product = {
 import React, { useEffect, useState } from 'react';
 import ProductCard from './components/ProductCard';
 import axios from 'axios';
+import { Button } from '@material-tailwind/react';
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]); // Define Product[] as the type of products state
@@ -37,6 +38,8 @@ const ProductList = () => {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
+      <br />
+      <Button>Checkout</Button>
     </div>
   );
 };

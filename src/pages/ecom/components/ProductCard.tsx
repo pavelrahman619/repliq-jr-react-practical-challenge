@@ -4,6 +4,7 @@ import {
     CardBody,
     CardFooter,
     Typography,
+    Button,
 } from "@material-tailwind/react";
 import React from 'react';
 
@@ -12,27 +13,21 @@ const ProductCard = ({ product }) => {
         <Card className="w-96">
             <CardHeader color="blue" className="relative h-56">
                 <img
-                    src="/img/blog.jpg"
-                    alt="img-blur-shadow"
+                    src={`${product.image}`}
+                    alt={`${product.name}`}
                     className="h-full w-full"
                 />
             </CardHeader>
             <CardBody className="text-center">
                 <Typography variant="h5" className="mb-2">
-                    Cozy 5 Stars Apartment
+                    {product.title}
                 </Typography>
-                <Typography>
-                    The place is close to Barceloneta Beach and bus stop just 2 min by
-                    walk and near to "Naviglio" where you can enjoy the main night life in
-                    Barcelona.
+                <Typography variant="h6">
+                    Price: ${product.price}
                 </Typography>
             </CardBody>
-            <CardFooter divider className="flex items-center justify-between py-3">
-                <Typography variant="small">$899/night</Typography>
-                <Typography variant="small" color="gray" className="flex gap-1">
-                    <i className="fas fa-map-marker-alt fa-sm mt-[3px]" />
-                    Barcelona, Spain
-                </Typography>
+            <CardFooter divider className="flex items-center justify-center py-3">
+                <Button>Add to Cart</Button>
             </CardFooter>
         </Card>
     );
