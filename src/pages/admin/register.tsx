@@ -53,7 +53,7 @@ export default function Register() {
     return (
         <div className="flex flex-col justify-center items-center">
             <div className="max-w-md w-full mx-auto p-6 bg-white rounded-md shadow-md">
-                <h2 className="text-2xl font-semibold text-center mb-6">Register</h2>
+                <h2 className="text-2xl font-semibold text-center mb-6">Admin Register</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label htmlFor="phoneNumber" className="block font-medium mb-1">

@@ -15,7 +15,7 @@ export default function Dashboard() {
         } else {
             // If registration data does not exist, user is not authenticated
             setTimeout(() => {
-                router.push('/login'); // Redirect to login page
+                router.push('/admin/login'); // Redirect to login page
             }, 2000)
         }
     }, []);

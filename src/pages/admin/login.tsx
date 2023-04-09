@@ -1,4 +1,5 @@
 import { Button } from "@material-tailwind/react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
@@ -62,7 +63,7 @@ export default function Login() {
     return (
         <div className="flex flex-col justify-center items-center">
             <div className="max-w-md w-full mx-auto p-6 bg-white rounded-md shadow-md">
-                <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
+                <h2 className="text-2xl font-semibold text-center mb-6">Admin Login</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label htmlFor="phoneNumber" className="block font-medium mb-1">
@@ -99,6 +100,11 @@ export default function Login() {
                         Login
                     </Button>
                 </form>
+                <br />
+                <Link href="/admin/register">
+                    <Button className="w-full">Register</Button>
+                </Link>
+
             </div>
             {successMessage && <h2 className="text-blue-600">{successMessage}</h2>}
             {errorMessage && <h2 className="text-blue-600">{errorMessage}</h2>}
